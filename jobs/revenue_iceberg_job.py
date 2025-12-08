@@ -16,6 +16,13 @@ from revenue_pipeline.writers.iceberg_writer import (
     create_revenue_table,
     write_revenue_to_iceberg,
 )
+from revenue_pipeline.dq.checks import (
+    check_not_null_keys,
+    check_non_negative_metrics,
+    check_revenue_consistency,
+    check_single_day,
+)
+
 from revenue_pipeline.logging_utils import get_logger
 
 
@@ -52,7 +59,14 @@ def main(config_path: str, process_date: str) -> None:
             end_date=end_date,
         )
 
-        create_revenue_table(spark, revenue_table)
+        # ---- Data Quality Checks (Gold) ----
+        check_not_null_keys(revenue_df)
+        check_non_negative_metrics(revenue_df)
+        check_revenue_consistency(revenue_df)
+        check_single_day(revenue_df, process_date)
+        # -----------------------------------
+
+        initialize_revenue_table(spark, revenue_table)
 
         write_revenue_to_iceberg(
             revenue_df=revenue_df,

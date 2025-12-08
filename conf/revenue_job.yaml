@@ -1,1 +1,9 @@
-env: dev
+sources:
+  sales:
+    table: silver.sales_bv
+  product:
+    table: silver.product_bv
+
+target:
+  revenue:
+    table: gold.revenue_daily
