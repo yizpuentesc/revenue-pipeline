@@ -134,7 +134,7 @@ revenue-pipeline/
 ```
 ------------------------------------------------------------------------
 
-## 5. Layer Responsibilities (Inside This Project)
+## 5. Layer Responsibilities 
 ```
   Folder       Responsibility
   ------------ ------------------------------------------------------
@@ -189,7 +189,7 @@ pytest tests/
 ```
 ------------------------------------------------------------------------
 
-## 9. Dynamic Pricing (Future-Ready)
+## 9. Dynamic Pricing (Future)
 
 The current model assumes **static price from product**.
 
