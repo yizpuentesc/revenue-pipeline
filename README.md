@@ -135,7 +135,7 @@ revenue-pipeline/
 ------------------------------------------------------------------------
 
 ## 5. Layer Responsibilities (Inside This Project)
-
+```
   Folder       Responsibility
   ------------ ------------------------------------------------------
   `sources/`   Read and normalize data from the silver layer
@@ -145,7 +145,7 @@ revenue-pipeline/
   `jobs/`      Orchestrate the full pipeline execution
   `dq/`        Data quality validation
   `tests/`     Unit tests
-
+```
 ------------------------------------------------------------------------
 
 
