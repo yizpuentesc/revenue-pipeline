@@ -57,17 +57,15 @@ Including:
 ## 3. Gold Fact Definition
 
 **Fact: `revenue_daily`**
-
+``` 
   Column    Description
   --------- -------------------------------
-  sku_id    Product identifier
-  date_id   Calendar day
-  price     Unit price (currently static)
-  sales     Units sold per day
-  revenue   price × sales
- 
--Grain: \> One row per `sku_id` and `date_id`
-
+  sku_id    Product identifier/
+  date_id   Calendar day/
+  price     Unit price (currently static)/
+  sales     Units sold per day/
+  revenue   price × sales/
+``` 
 ------------------------------------------------------------------------
 
 ## 4. Project Structure
